@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication9
+{
+    class Program
+    {
+        public static double summtion(int n, int i , double k ,string a)
+        {
+            
+            int I = i;
+            double sum = 0;
+            if (n == 0 && a == "i")
+            {
+                return k * i;
+            }
+            else if (n == 0 && a != "i")
+            {
+                return Convert.ToDouble(a);
+            }
+            else if (n != 0 && a == "i")
+            {
+                for (I = i; I <= n; I++)
+                { sum += I; } return k * sum;
+            }
+            else if (n != 0 && a != "i"&&a!="i^2"&&a!="i^3")
+            {
+                for (I = i; I <= n; I++)
+                { sum += Convert.ToDouble(a); } return k * sum;
+            }
+            else if (n !=0 && a == "i^2") { return k*(n*(n+1)*(2*n+1))/6;}
+                else if (n!=0&&a=="i^3") return k* (n*n*(n+1)*(n+1))/4;
+            else return 0;
+        }
+
+       
+        static void Main(string[] args)
+        {
+            Console.WriteLine("n");
+            Console.WriteLine("∑ k ai");
+            Console.WriteLine("i=...");
+            Console.WriteLine("please enter n");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("please enter i");
+            int i = int.Parse(Console.ReadLine());
+            Console.WriteLine("please enter ai");
+            string a = Console.ReadLine();
+            Console.WriteLine("please enter k");
+            int k = int.Parse(Console.ReadLine());
+            Console.WriteLine("the answer is " + summtion(n, i,k, a));
+        }
+    }
+}
