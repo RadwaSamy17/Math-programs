@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    class Program
+    {
+        public static int fib(int n)
+        {
+            if (n == 1 || n == 0)
+            { return 1; }
+            else 
+            { return fib(n - 1) + fib(n - 2); }
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("please enter n to calculate the fibonnic :");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("f(n)= "+fib(n));
+
+        }
+    }
+}
