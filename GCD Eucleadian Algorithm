@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void gcd(int m,int n)
+        {
+            if (m < 0 || n < 0)
+            {
+                Console.WriteLine("you must enter positive intger num");
+            }
+            else
+            {
+                if (n > m)
+                { int z = m; m = n; n = z; }
+                while (n != 0)
+                {
+                    int r;
+                    r = m % n;
+                    m = n;
+                    n = r;
+
+                }
+                Console.WriteLine("the answer is : " + m);
+            }  
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("To calculate the GCD:");
+            Console.WriteLine("the first num is:");
+            int m = int.Parse(Console.ReadLine());
+            Console.WriteLine("the second num is:");
+            int n = int.Parse(Console.ReadLine());
+              gcd(m, n);
+         
+            }
+    }
+}
