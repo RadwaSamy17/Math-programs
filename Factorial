@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication7
+{
+    class Program
+    {
+        public static int fact(int n)
+        {
+            if (n == 1)
+                return 1;
+            else return n * fact(n - 1);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("please enter the number to calculate the factorial:");
+            int n = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("the answer is :"+ fact(n));
+        }
+    }
+}
